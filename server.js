@@ -2,14 +2,12 @@ require("dotenv").config();
 const express = require("express");
 const fetch = require("node-fetch");
 const app = express();
-const PORT = process.env.PORT || 3001;
 
+const PORT = process.env.PORT || 3001;
 const API_KEY = process.env.GOLDAPI_API_KEY;
 const GOLDAPI_URL = "https://www.goldapi.io/api/XAU/USD";
 
-app.get("/", (req, res) => {
-  res.send("Server is running.");
-});
+app.use(express.static("."));
 
 app.get("/api/gold-price", async (req, res) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
