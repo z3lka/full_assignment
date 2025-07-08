@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Product List</title>
+    <link
+      rel="stylesheet"
+      href="style.css" />
+  </head>
+  <body>
+    <h1 class="title">Product List</h1>
+    <div class="filters">
+      <label
+        >Price: $
+        <input
+          type="number"
+          id="min-price"
+          placeholder="Min"
+          min="0"
+          style="width: 60px" />
+        -
+        <input
+          type="number"
+          id="max-price"
+          placeholder="Max"
+          min="0"
+          style="width: 60px" />
+      </label>
+      <label style="margin-left: 20px"
+        >Popularity:
+        <input
+          type="range"
+          id="min-popularity"
+          min="0"
+          max="5"
+          step="0.1"
+          value="0" />
+        <span id="popularity-value">0</span>/5
+      </label>
+      <button id="filter-btn">Filter</button>
+    </div>
+    <div class="carousel-container">
+      <button
+        class="carousel-arrow left"
+        id="arrow-left">
+        &#8592;
+      </button>
+      <div
+        class="carousel"
+        id="carousel">
+        <!-- Product cards will be injected here -->
+      </div>
+      <button
+        class="carousel-arrow right"
+        id="arrow-right">
+        &#8594;
+      </button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
