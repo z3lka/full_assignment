@@ -18,22 +18,23 @@
         <input
           type="number"
           id="min-price"
+          class="price-input"
           placeholder="Min"
-          min="0"
-          style="width: 60px" />
-        -
+          min="0" />
+        <span class="price-sep">–</span>
         <input
           type="number"
           id="max-price"
+          class="price-input"
           placeholder="Max"
-          min="0"
-          style="width: 60px" />
+          min="0" />
       </label>
-      <label style="margin-left: 20px"
+      <label class="popularity-group"
         >Popularity:
         <input
           type="range"
           id="min-popularity"
+          class="modern-slider"
           min="0"
           max="5"
           step="0.1"
@@ -44,9 +45,9 @@
     </div>
     <div class="carousel-container">
       <button
-        class="carousel-arrow left"
+        class="carousel-arrow left chevron"
         id="arrow-left">
-        &#8592;
+        &#x2039;
       </button>
       <div
         class="carousel"
@@ -54,9 +55,9 @@
         <!-- Product cards will be injected here -->
       </div>
       <button
-        class="carousel-arrow right"
+        class="carousel-arrow right chevron"
         id="arrow-right">
-        &#8594;
+        &#x203A;
       </button>
     </div>
     <script src="script.js"></script>
